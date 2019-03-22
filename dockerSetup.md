@@ -7,6 +7,7 @@
 1. Docker engine which enables us to create containers
 
 `sudo apt-get install docker`
+
 2. Docker-compose which allows us to setup the containers as we like
 
 `sudo apt-get install docker-compose`
@@ -55,8 +56,17 @@ You will be greeted by an interface on which yo will be able to interact with yo
 ### From pgadmin
 Select **Add connection to the server** (The top left power cable plug shaped button). Enter a name you like `0.0.0.0` as host and `5431` as the port. Don't forget to set you username and password
 
+## From Jupater notebook
+Run `jupyter notebook` in the location where you want your jupyter data to be saved. Create a new notebook and add the lines
+```
+import psycopg2 as pg
+connection = pg.connect("dbname=MyDBName user = theuser password = thepassword host = 0.0.0.0 port=5431")
+```
+
 ## Interfacing with the docker container
 Listing all currently active docker containers (including their Container ID !!): `sudo docker container ls`
+
+
 
 
 
