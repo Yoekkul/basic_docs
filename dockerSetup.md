@@ -65,9 +65,8 @@ connection = pg.connect("dbname=MyDBName user = theuser password = thepassword h
 
 ## Interfacing with the docker container
 Listing all currently active docker containers (including their Container ID !!): `sudo docker container ls`
-In some cases the permission of writing to the newly uploaded files might be denied. We can connect to the running 
-container via 'sudo docker exec -i -t [containerId] /bin/bash' to change the permission of a folder we can enter the
-following command: 'chmod 777 [directory]' !!This gives read write and modify access on the folder, unintended consequences might arise!!
+In some cases the permission of writing to the newly uploaded files might be denied. We can connect to the running container via `sudo docker exec -i -t [containerId] /bin/bash` to change the permission of a folder we can enter the
+following command: `chmod 777 [directory]` !!This gives read write and modify access on the folder, unintended consequences might ahrise!!
 
 
 
